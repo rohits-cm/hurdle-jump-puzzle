@@ -86,16 +86,16 @@
     
     function Jump() {
         var personElement = $('.person');
-        var jumpHeight = 150; // Adjust the jump height as needed
+        var jumpHeight = 50; // Adjust the jump height as needed
         var jumpDuration = 500; // Adjust the duration of the jump animation
         
         jumping = true; // Set jumping to true to prevent multiple jumps
         
         personElement.animate(
             {
-                bottom: jumpHeight + 'px'
+                bottom: jumpHeight + "0px"
             },
-            jumpDuration / 2,
+            jumpDuration,
             'linear',
             function() {
                 // After jumping up, animate the person's descent
@@ -103,7 +103,7 @@
                     {
                         bottom: '0px'
                     },
-                    jumpDuration / 2,
+                    jumpDuration,
                     'linear',
                     function() {
                         jumping = false; // Reset jumping to allow another jump
